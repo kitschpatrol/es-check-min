@@ -25,7 +25,7 @@ A simple tool built on [`es-check`](https://github.com/yowainwright/es-check) to
 
 The `es-check-min` tool does not require any arguments, and simply runs a loop to determine the lowest supported version. This is in slight contrast to `es-check` which checks a file against a _specified_ ECMAScript version.
 
-The following ECMAScript versions are supported:
+Detection of the following ECMAScript versions is supported:
 
 - ES5
 - ES6 / ES2015
