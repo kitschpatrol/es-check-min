@@ -1,4 +1,7 @@
+import { getEsCheckPath } from './utilities'
 import { execa } from 'execa'
+
+const esCheckPath = await getEsCheckPath()
 
 const esVersions = [
 	// 'es3', // not working
@@ -21,9 +24,7 @@ export async function esCheckMin(path: string): Promise<EsVersion | undefined> {
 		const cleanVersion = esVersion.split('/').at(-1) ?? esVersion
 
 		try {
-			await execa('es-check', [cleanVersion, path, '--silent', '--allow-hash-bang', '--module'], {
-				preferLocal: true,
-			})
+			await execa(esCheckPath, [cleanVersion, path, '--silent', '--allow-hash-bang', '--module'])
 			return esVersion
 		} catch {
 			continue

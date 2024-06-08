@@ -41,12 +41,12 @@
 	"keywords": [
 		"es-check",
 		"cli",
-		"detection",
+		"version-detection",
 		"npm-package",
 		"ecmascript"
 	],
 	"scripts": {
-		"build": "pkgroll --clean-dist --minify",
+		"build": "pkgroll --clean-dist --minify false",
 		"clean": "git clean -fdX && rm ./pnpm-lock.yaml",
 		"fix": "shared-config --fix",
 		"lint": "shared-config --lint",
@@ -63,6 +63,7 @@
 	"devDependencies": {
 		"@kitschpatrol/shared-config": "^4.7.0",
 		"bumpp": "^9.4.1",
+		"package-up": "^5.0.0",
 		"pkgroll": "^2.1.1",
 		"typescript": "^5.4.5",
 		"vitest": "^1.6.0"
