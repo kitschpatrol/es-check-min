@@ -1,0 +1,73 @@
+{
+	"name": "es-check-min",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "A CLI tool and library to find the minimum compatible ECMAScript version of a JavaScript file.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kitschpatrol/es-check-min.git"
+	},
+	"homepage": "https://github.com/kitschpatrol/es-check-min",
+	"bugs": {
+		"url": "https://github.com/kitschpatrol/es-check-min/issues",
+		"email": "eric@ericmika.com"
+	},
+	"author": {
+		"name": "Eric Mika",
+		"email": "eric@ericmika.com",
+		"url": "https://ericmika.com"
+	},
+	"license": "MIT",
+	"packageManager": "pnpm@9.2.0",
+	"engines": {
+		"node": ">=20.0.0",
+		"pnpm": ">=9.0.0"
+	},
+	"bin": {
+		"es-check-min": "dist/bin/cli.js"
+	},
+	"main": "./dist/lib/index.js",
+	"module": "./dist/lib/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/lib/index.js",
+			"types": "./dist/lib/index.d.ts"
+		}
+	},
+	"types": "./dist/lib/index.d.ts",
+	"files": [
+		"dist/*"
+	],
+	"keywords": [
+		"es-check",
+		"cli",
+		"detection",
+		"npm-package",
+		"ecmascript"
+	],
+	"scripts": {
+		"build": "pkgroll --clean-dist --minify",
+		"clean": "git clean -fdX && rm ./pnpm-lock.yaml",
+		"fix": "shared-config --fix",
+		"lint": "shared-config --lint",
+		"release": "pnpm bumpp --commit 'Release: %s' && pnpm build && pnpm publish --otp $(op read 'op://Personal/Npmjs/one-time password?attribute=otp')",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@types/node": "20.14.2",
+		"@types/yargs": "17.0.32",
+		"es-check": "7.2.1",
+		"execa": "9.2.0",
+		"yargs": "17.7.2"
+	},
+	"devDependencies": {
+		"@kitschpatrol/shared-config": "^4.7.0",
+		"bumpp": "^9.4.1",
+		"pkgroll": "^2.1.1",
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
