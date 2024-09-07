@@ -22,5 +22,5 @@
 	},
 
 	"include": ["**/*"],
-	"exclude": ["dist/", "bin/"]
+	"exclude": ["dist/"]
 }

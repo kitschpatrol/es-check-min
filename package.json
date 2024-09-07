@@ -46,8 +46,8 @@
 		"ecmascript"
 	],
 	"scripts": {
-		"build": "pkgroll --clean-dist --minify false",
-		"clean": "git clean -fdX && rimraf ./pnpm-lock.yaml",
+		"build": "pkgroll --clean-dist --minify",
+		"clean": "rimraf ./pnpm-lock.yaml && git clean -fdX",
 		"fix": "shared-config --fix",
 		"lint": "shared-config --lint",
 		"release": "pnpm bumpp --commit 'Release: %s' && pnpm build && pnpm publish --otp $(op read 'op://Personal/Npmjs/one-time password?attribute=otp')",

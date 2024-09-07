@@ -7,5 +7,5 @@
 
 	/* Also lint config files. */
 	"include": ["**/*", "**/**.*"],
-	"exclude": ["dist/", "bin/"]
+	"exclude": ["dist/"]
 }
