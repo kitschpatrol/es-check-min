@@ -1,5 +1,5 @@
-import { getEsCheckPath } from './utilities'
 import { execa } from 'execa'
+import { getEsCheckPath } from './utilities'
 
 const esCheckPath = await getEsCheckPath()
 

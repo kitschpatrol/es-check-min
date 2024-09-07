@@ -1,8 +1,8 @@
-import { esCheckMin } from '../src/lib'
 import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { esCheckMin } from '../src/lib'
 
 describe('version detection', () => {
 	let tempAssetPath: string

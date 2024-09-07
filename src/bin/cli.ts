@@ -1,7 +1,7 @@
-import { version } from '../../package.json'
-import { esCheckMin } from '../lib'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
+import { version } from '../../package.json'
+import { esCheckMin } from '../lib'
 
 const yargsInstance = yargs(hideBin(process.argv))
 

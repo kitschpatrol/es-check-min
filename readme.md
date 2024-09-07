@@ -115,7 +115,7 @@ Requests for something like this have come up once or twice:
 
 [@kitschpatrol](https://github.com/kitschpatrol)
 
-## Acknowledgements
+## Acknowledgments
 
 `es-check-min` is just a trivial wrapper over `es-check`. All credit goes to [Jeff Wainwright](https://github.com/yowainwright) and [contributors](https://github.com/yowainwright/es-check?tab=readme-ov-file#contributors) for creating and maintaining [`es-check`](https://github.com/yowainwright/es-check).
 
