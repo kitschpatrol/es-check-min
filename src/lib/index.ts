@@ -19,6 +19,11 @@ const esVersions = [
 
 export type EsVersion = (typeof esVersions)[number]
 
+/**
+ * Get the minimum ECMAScript version required to run a file.
+ * @param path The path to the file to check, or a glob pattern of files.
+ * @returns The minimum ECMAScript version required to run the file, or `undefined` if the file is not valid ECMAScript.
+ */
 export async function esCheckMin(path: string): Promise<EsVersion | undefined> {
 	for (const esVersion of esVersions) {
 		const cleanVersion = esVersion.split('/').at(-1) ?? esVersion

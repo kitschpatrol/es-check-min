@@ -23,7 +23,7 @@
 
 A simple tool built on [`es-check`](https://github.com/yowainwright/es-check) to find the lowest supported [ECMAScript version](https://en.wikipedia.org/wiki/ECMAScript_version_history) of a JavaScript file.
 
-The `es-check-min` tool does not require any arguments, and simply runs a loop to determine the lowest supported version. This is in slight contrast to `es-check` which checks a file against a _specified_ ECMAScript version.
+The `es-check-min` tool does not require any arguments, and simply runs a loop to determine the file's lowest compatible ECMAScript version. This is in slight contrast to `es-check` which checks a file against a _specified_ ECMAScript version.
 
 Detection of the following ECMAScript versions is supported:
 
