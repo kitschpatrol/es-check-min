@@ -67,20 +67,21 @@ let newNumbers = numbers.with(0, 99)
 console.log('Numbers with new first element:', newNumbers)
 
 // ES14 feature: Set methods
-const setA = new Set([1, 2, 3, 4])
-const setB = new Set([3, 4, 5, 6])
+// TODO not actually in the spec?
+// const setA = new Set([1, 2, 3, 4])
+// const setB = new Set([3, 4, 5, 6])
 
-const intersection = setA.intersection(setB)
-console.log('Intersection:', [...intersection])
+// const intersection = setA.intersection(setB)
+// console.log('Intersection:', [...intersection])
 
-const difference = setA.difference(setB)
-console.log('Difference:', [...difference])
+// const difference = setA.difference(setB)
+// console.log('Difference:', [...difference])
 
-const union = setA.union(setB)
-console.log('Union:', [...union])
+// const union = setA.union(setB)
+// console.log('Union:', [...union])
 
-const symmetricDifference = setA.symmetricDifference(setB)
-console.log('Symmetric Difference:', [...symmetricDifference])
+// const symmetricDifference = setA.symmetricDifference(setB)
+// console.log('Symmetric Difference:', [...symmetricDifference])
 
 // Using template literals and logging results
 console.log(`Greeting: ${greeting}`)

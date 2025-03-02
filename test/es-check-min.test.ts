@@ -43,11 +43,11 @@ describe('version detection', () => {
 
 		for (const testFilePath of testFilePaths) {
 			const expectedVersion = path.basename(testFilePath).split('-')[0]
-
-			console.log(expectedVersion)
-
 			const result = await esCheckMin(testFilePath)
-			expect(result).toContain(expectedVersion)
+			expect(
+				result,
+				`Expected ${expectedVersion} but got ${result} in file ${path.basename(testFilePath)}`,
+			).toContain(expectedVersion)
 		}
 	})
 

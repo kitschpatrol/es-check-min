@@ -46,19 +46,19 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/node": "^20.16.5",
-		"@types/yargs": "17.0.32",
-		"es-check": "7.2.1",
-		"execa": "9.2.0",
-		"yargs": "17.7.2"
+		"@types/node": "^22.13.8",
+		"@types/yargs": "^17.0.33",
+		"es-check": "^8.0.1",
+		"execa": "^9.5.2",
+		"yargs": "^17.7.2"
 	},
 	"devDependencies": {
 		"@kitschpatrol/shared-config": "^5.0.6",
-		"bumpp": "^9.5.2",
+		"bumpp": "^10.0.3",
 		"package-up": "^5.0.0",
-		"pkgroll": "^2.5.0",
+		"pkgroll": "^2.11.2",
 		"typescript": "~5.7.3",
-		"vitest": "^2.1.1"
+		"vitest": "^3.0.7"
 	},
 	"packageManager": "pnpm@10.5.2",
 	"engines": {
@@ -67,5 +67,11 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"puppeteer"
+		]
 	}
 }

@@ -29,6 +29,7 @@ export async function esCheckMin(path: string): Promise<EsVersion | undefined> {
 		const cleanVersion = esVersion.split('/').at(-1) ?? esVersion
 
 		try {
+			// Add '--checkFeatures' once some issues are ironed out
 			await execa(esCheckPath, [cleanVersion, path, '--silent', '--allow-hash-bang', '--module'])
 			return esVersion
 		} catch {
