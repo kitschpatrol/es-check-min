@@ -13,7 +13,7 @@
 	"bugs": "https://github.com/kitschpatrol/es-check-min/issues",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kitschpatrol/es-check-min"
+		"url": "git+https://github.com/kitschpatrol/es-check-min.git"
 	},
 	"license": "MIT",
 	"author": {
@@ -46,14 +46,14 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/node": "^22.13.8",
+		"@types/node": "^20.17.23",
 		"@types/yargs": "^17.0.33",
 		"es-check": "^8.0.1",
 		"execa": "^9.5.2",
 		"yargs": "^17.7.2"
 	},
 	"devDependencies": {
-		"@kitschpatrol/shared-config": "^5.0.6",
+		"@kitschpatrol/shared-config": "^5.2.0",
 		"bumpp": "^10.0.3",
 		"package-up": "^5.0.0",
 		"pkgroll": "^2.11.2",
@@ -62,8 +62,7 @@
 	},
 	"packageManager": "pnpm@10.5.2",
 	"engines": {
-		"node": ">=22.0.0",
-		"pnpm": ">=10.0.0"
+		"node": ">=20.9.0"
 	},
 	"publishConfig": {
 		"access": "public"
