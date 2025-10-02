@@ -38,39 +38,33 @@
 		"dist/*"
 	],
 	"scripts": {
-		"build": "pkgroll --clean-dist --minify --tsconfig ./tsconfig.build.json",
+		"build": "pkgroll --clean-dist --tsconfig ./tsconfig.build.json",
 		"clean": "git rm -f pnpm-lock.yaml ; git clean -fdX",
-		"fix": "kpi fix",
-		"lint": "kpi lint",
+		"fix": "ksc fix",
+		"lint": "ksc lint",
 		"release": "bumpp --commit 'Release: %s' && pnpm run build && pnpm publish --otp $(op read 'op://Personal/Npmjs/one-time password?attribute=otp')",
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/node": "^20.17.23",
+		"@types/node": "^20.19.19",
 		"@types/yargs": "^17.0.33",
-		"es-check": "^8.0.1",
-		"execa": "^9.5.2",
+		"es-check": "^9.4.4",
+		"execa": "^9.6.0",
+		"pkg-types": "^2.2.7",
 		"yargs": "^17.7.2"
 	},
 	"devDependencies": {
-		"@kitschpatrol/shared-config": "^5.2.0",
-		"bumpp": "^10.0.3",
-		"package-up": "^5.0.0",
-		"pkgroll": "^2.11.2",
-		"typescript": "~5.7.3",
-		"vitest": "^3.0.7"
+		"@kitschpatrol/shared-config": "^5.7.1",
+		"bumpp": "^10.2.3",
+		"pkgroll": "^2.16.0",
+		"typescript": "~5.9.3",
+		"vitest": "^3.2.4"
 	},
-	"packageManager": "pnpm@10.5.2",
+	"packageManager": "pnpm@10.18.0",
 	"engines": {
-		"node": ">=20.9.0"
+		"node": ">=20.19.0"
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"puppeteer"
-		]
 	}
 }

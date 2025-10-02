@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { packageUp } from 'package-up'
+import { findPackage } from 'pkg-types'
 
 /**
  * Get the `es-check` binary
@@ -8,13 +8,6 @@ import { packageUp } from 'package-up'
  * Includes some extra provisions for finding the binary in library contexts vs. global CLI installations.
  */
 export async function getEsCheckPath() {
-	const packagePath = await packageUp({
-		cwd: path.resolve(path.dirname(fileURLToPath(import.meta.url))),
-	})
-
-	if (packagePath === undefined) {
-		throw new Error('Could not find package.json.')
-	}
-
+	const packagePath = await findPackage(path.resolve(path.dirname(fileURLToPath(import.meta.url))))
 	return path.join(path.dirname(packagePath), '/node_modules/.bin/es-check')
 }
