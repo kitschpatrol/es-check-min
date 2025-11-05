@@ -1,6 +1,6 @@
 {
 	"name": "es-check-min",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "A CLI tool and library to find the minimum compatible ECMAScript version of a JavaScript file.",
 	"keywords": [
 		"es-check",
