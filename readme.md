@@ -69,7 +69,7 @@ npm install --global es-check-min
 
 ### CLI
 
-### Example
+#### Example
 
 ```sh
 es-check-min ./mystery-file.js
@@ -81,7 +81,13 @@ prints...
 es6/es2015
 ```
 
-### Command
+<!-- cli-help -->
+
+#### Command: `es-check-min`
+
+Get the minimum supported ECMAScript version of a JavaScript file.
+
+Usage:
 
 ```txt
 es-check-min <file>
@@ -91,10 +97,12 @@ es-check-min <file>
 | ------------------- | ------------------------------------- | -------- |
 | `file`              | Path to the JavaScript file to check. | `string` |
 
-| Option      | Alias | Description         | Type      |
-| ----------- | ----- | ------------------- | --------- |
-| `--help`    | `-h`  | Show help           | `boolean` |
-| `--version` | `-v`  | Show version number | `boolean` |
+| Option              | Description         | Type      |
+| ------------------- | ------------------- | --------- |
+| `--help`<br>`-h`    | Show help           | `boolean` |
+| `--version`<br>`-v` | Show version number | `boolean` |
+
+<!-- /cli-help -->
 
 ### Library
 
