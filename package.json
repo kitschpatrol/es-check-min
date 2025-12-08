@@ -46,26 +46,23 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/node": "^20.19.24",
-		"@types/yargs": "^17.0.34",
-		"es-check": "^9.4.4",
-		"execa": "^9.6.0",
+		"@types/node": "^20.19.25",
+		"@types/yargs": "^17.0.35",
+		"es-check": "^9.5.2",
+		"execa": "^9.6.1",
 		"pkg-types": "^2.3.0",
 		"yargs": "^17.7.2"
 	},
 	"devDependencies": {
-		"@kitschpatrol/shared-config": "^5.8.1",
-		"bumpp": "^10.3.1",
-		"mdat-plugin-cli-help": "^1.0.2",
-		"pkgroll": "^2.20.1",
+		"@kitschpatrol/shared-config": "^5.10.0",
+		"bumpp": "^10.3.2",
+		"mdat-plugin-cli-help": "^1.0.4",
+		"pkgroll": "^2.21.4",
 		"typescript": "~5.9.3",
-		"vitest": "^4.0.7"
+		"vitest": "^4.0.15"
 	},
-	"packageManager": "pnpm@10.20.0",
+	"packageManager": "pnpm@10.25.0",
 	"engines": {
 		"node": ">=20.19.0"
-	},
-	"publishConfig": {
-		"access": "public"
 	}
 }
