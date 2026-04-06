@@ -21,6 +21,7 @@
 		"email": "eric@ericmika.com",
 		"url": "https://ericmika.com"
 	},
+	"sideEffects": false,
 	"type": "module",
 	"exports": {
 		".": {
@@ -38,31 +39,39 @@
 		"dist/*"
 	],
 	"scripts": {
-		"build": "pkgroll --clean-dist --tsconfig ./tsconfig.build.json",
+		"build": "tsdown",
 		"clean": "git rm -f pnpm-lock.yaml ; git clean -fdX",
 		"fix": "ksc fix",
 		"lint": "ksc lint",
 		"release": "bumpp --commit 'Release: %s' && pnpm run build && NPM_AUTH_TOKEN=$(op read 'op://Personal/npm/token') && pnpm publish",
-		"test": "vitest"
+		"test": "vitest run"
 	},
 	"dependencies": {
-		"@types/node": "^20.19.25",
+		"@types/node": "^20.19.39",
 		"@types/yargs": "^17.0.35",
-		"es-check": "^9.5.2",
+		"es-check": "^9.6.4",
 		"execa": "^9.6.1",
 		"pkg-types": "^2.3.0",
-		"yargs": "^17.7.2"
+		"yargs": "^18.0.0"
 	},
 	"devDependencies": {
-		"@kitschpatrol/shared-config": "^5.10.0",
-		"bumpp": "^10.3.2",
-		"mdat-plugin-cli-help": "^1.0.4",
-		"pkgroll": "^2.21.4",
+		"@arethetypeswrong/core": "^0.18.2",
+		"@kitschpatrol/shared-config": "^7.1.0",
+		"bumpp": "^11.0.1",
+		"mdat-plugin-cli-help": "^2.0.2",
+		"publint": "^0.3.18",
+		"tsdown": "^0.21.7",
 		"typescript": "~5.9.3",
-		"vitest": "^4.0.15"
+		"vitest": "^4.1.2"
 	},
-	"packageManager": "pnpm@10.25.0",
+	"packageManager": "pnpm@10.33.0",
 	"engines": {
 		"node": ">=20.19.0"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": ">=22.18.0"
+		}
 	}
 }

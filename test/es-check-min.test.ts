@@ -1,15 +1,24 @@
 import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import { esCheckMin } from '../src/lib'
+
+// Windows tmpdir issues on CI, we use a local temp directory. We have to go up
+// a directory to avoid the monorepo illusion in linting tools.
+const temporaryBase = path.resolve(
+	path.dirname(fileURLToPath(import.meta.url)),
+	process.env.CI ? '../..' : os.tmpdir(),
+	'tmp',
+)
 
 describe('version detection', () => {
 	let tempAssetPath: string
 
 	beforeAll(async () => {
 		// Create temp directory
-		tempAssetPath = path.join(os.tmpdir(), `es-check-min-${Date.now().toString()}`)
+		tempAssetPath = path.join(temporaryBase, `es-check-min-${Date.now().toString()}`)
 		await fs.mkdir(tempAssetPath, { recursive: true })
 
 		// Generate JavaScript test variations
@@ -63,6 +72,6 @@ describe('version detection', () => {
 
 	afterAll(async () => {
 		// Clean up temp files
-		await fs.rm(tempAssetPath, { force: true, recursive: true })
+		await fs.rm(temporaryBase, { force: true, recursive: true })
 	})
 })
