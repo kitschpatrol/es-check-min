@@ -9,5 +9,6 @@ import { findPackage } from 'pkg-types'
  */
 export async function getEsCheckPath() {
 	const packagePath = await findPackage(path.resolve(path.dirname(fileURLToPath(import.meta.url))))
-	return path.join(path.dirname(packagePath), '/node_modules/.bin/es-check')
+	const extension = process.platform === 'win32' ? '.cmd' : ''
+	return path.join(path.dirname(packagePath), 'node_modules', '.bin', `es-check${extension}`)
 }

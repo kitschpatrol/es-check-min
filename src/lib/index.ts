@@ -21,8 +21,11 @@ export type EsVersion = (typeof esVersions)[number]
 
 /**
  * Get the minimum ECMAScript version required to run a file.
+ *
  * @param path The path to the file to check, or a glob pattern of files.
- * @returns The minimum ECMAScript version required to run the file, or `undefined` if the file is not valid ECMAScript.
+ *
+ * @returns The minimum ECMAScript version required to run the file, or
+ *   `undefined` if the file is not valid ECMAScript.
  */
 export async function esCheckMin(path: string): Promise<EsVersion | undefined> {
 	for (const esVersion of esVersions) {
@@ -30,7 +33,15 @@ export async function esCheckMin(path: string): Promise<EsVersion | undefined> {
 
 		try {
 			// Add '--checkFeatures' once some issues are ironed out
-			await execa(esCheckPath, [cleanVersion, path, '--silent', '--allow-hash-bang', '--module'])
+			// Normalize backslashes to forward slashes because es-check uses fast-glob,
+			// which treats backslashes as escape characters rather than path separators.
+			await execa(esCheckPath, [
+				cleanVersion,
+				path.replaceAll('\\', '/'),
+				'--silent',
+				'--allow-hash-bang',
+				'--module',
+			])
 			return esVersion
 		} catch {
 			continue
