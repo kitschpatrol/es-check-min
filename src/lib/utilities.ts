@@ -5,7 +5,8 @@ import { findPackage } from 'pkg-types'
 /**
  * Get the `es-check` binary
  *
- * Includes some extra provisions for finding the binary in library contexts vs. global CLI installations.
+ * Includes some extra provisions for finding the binary in library contexts vs.
+ * global CLI installations.
  */
 export async function getEsCheckPath() {
 	const packagePath = await findPackage(path.resolve(path.dirname(fileURLToPath(import.meta.url))))

@@ -7,7 +7,7 @@
 <!-- badges -->
 
 [![NPM Package es-check-min](https://img.shields.io/npm/v/es-check-min.svg)](https://npmjs.com/package/es-check-min)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)
 [![CI](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml/badge.svg)](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml)
 
 <!-- /badges -->
@@ -120,7 +120,7 @@ Requests for something like this have come up once or twice:
 
 ## Maintainers
 
-[@kitschpatrol](https://github.com/kitschpatrol)
+[kitschpatrol](https://github.com/kitschpatrol)
 
 ## Acknowledgments
 
@@ -130,7 +130,11 @@ Requests for something like this have come up once or twice:
 
 ## Contributing
 
-[Issues](https://github.com/kitschpatrol/es-check-min/issues) and pull requests are welcome.
+[Issues](https://github.com/kitschpatrol/es-check-min/issues) are welcome and appreciated.
+
+Please open an issue to discuss changes before submitting a pull request. Unsolicited PRs (especially AI-generated ones) are unlikely to be merged.
+
+This repository uses [@kitschpatrol/shared-config](https://github.com/kitschpatrol/shared-config) (via its `ksc` CLI) for linting and formatting, plus [MDAT](https://github.com/kitschpatrol/mdat) for readme placeholder expansion.
 
 <!-- /contributing -->
 
@@ -138,6 +142,6 @@ Requests for something like this have come up once or twice:
 
 ## License
 
-[MIT](license.txt) © Eric Mika
+[MIT](license.txt) © [Eric Mika](https://ericmika.com)
 
 <!-- /license -->
