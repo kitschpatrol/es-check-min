@@ -6,15 +6,15 @@
 
 <!-- badges -->
 
-[![NPM Package es-check-min](https://img.shields.io/npm/v/es-check-min.svg)](https://npmjs.com/package/es-check-min)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)
+[![NPM Package es-check-min](https://img.shields.io/npm/v/es-check-min.svg)](https://www.npmjs.com/package/es-check-min)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 [![CI](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml/badge.svg)](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml)
 
 <!-- /badges -->
 
 <!-- short-description -->
 
-**A CLI tool and library to find the minimum compatible ECMAScript version of a JavaScript file.**
+**CLI tool and library to find the minimum compatible ECMAScript version of a JavaScript file.**
 
 <!-- /short-description -->
 
@@ -40,9 +40,15 @@ _Note: The underlying `es-check` implementation technically supports ES3 and ES1
 
 ## Getting started
 
+<!-- dependencies -->
+
 ### Dependencies
 
-The `es-check-min` CLI tool requires Node 20+. The exported APIs are ESM and share the Node 20+ requirement.
+- [Node.js](https://nodejs.org/) 24.16.0 or newer (specifically `^24.16.0 || >=26.3.0`)
+
+<!-- /dependencies -->
+
+The exported library APIs are ESM-only.
 
 ### Installation
 
@@ -82,7 +88,9 @@ es6/es2015
 
 <!-- cli-help -->
 
-#### Command: `es-check-min`
+#### Commands
+
+##### Command: `es-check-min`
 
 Get the minimum supported ECMAScript version of a JavaScript file.
 

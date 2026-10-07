@@ -12,8 +12,8 @@ await yargsInstance
 	.command(
 		'* <file>',
 		'Get the minimum supported ECMAScript version of a JavaScript file.',
-		(yargs) =>
-			yargs.positional('file', {
+		(command) =>
+			command.positional('file', {
 				demandOption: true,
 				describe: 'Path to the JavaScript file to check.',
 				normalize: true,

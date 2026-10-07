@@ -9,7 +9,7 @@ import { esCheckMin } from '../src/lib'
 // a directory to avoid the monorepo illusion in linting tools.
 const temporaryBase = path.resolve(
 	path.dirname(fileURLToPath(import.meta.url)),
-	process.env.CI ? '../..' : os.tmpdir(),
+	process.env.CI === undefined || process.env.CI === '' ? os.tmpdir() : '../..',
 	'tmp',
 )
 
@@ -40,8 +40,8 @@ describe('version detection', () => {
 
 			for (const [variant, code] of Object.entries(variants)) {
 				const fileName = `${fileBaseName}-${variant}${fileExtension}`
-				const filePath = path.join(tempAssetPath, fileName)
-				await fs.writeFile(filePath, code)
+				const variantPath = path.join(tempAssetPath, fileName)
+				await fs.writeFile(variantPath, code)
 			}
 		}
 	})
@@ -51,7 +51,7 @@ describe('version detection', () => {
 		const testFilePaths = testFiles.map((file) => path.join(tempAssetPath, file))
 
 		for (const testFilePath of testFilePaths) {
-			const expectedVersion = path.basename(testFilePath).split('-')[0]
+			const expectedVersion = path.basename(testFilePath).split('-', 1)[0]
 			const result = await esCheckMin(testFilePath)
 			expect(
 				result,
