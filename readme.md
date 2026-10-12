@@ -55,7 +55,7 @@ The exported library APIs are ESM-only.
 Invoke directly:
 
 ```sh
-npx es-check-min
+npx es-check-min <file>
 ```
 
 Or, install locally to access the CLI commands in a single project or to import the provided APIs:
