@@ -44,7 +44,7 @@
 		"fix": "ksc fix",
 		"lint": "ksc lint",
 		"prepare": "skills experimental_sync -y -f",
-		"release": "bumpp --commit 'Release: %s' && pnpm build && pnpm publish --otp $(op item get npm --otp)",
+		"release": "bumpp --commit 'Release: %s' && pnpm build && pnpm publish --otp $(op item get npm --otp) && brewpub --tap kitschpatrol/tap",
 		"test": "vitest run"
 	},
 	"dependencies": {
@@ -58,12 +58,14 @@
 	"devDependencies": {
 		"@arethetypeswrong/core": "^0.18.5",
 		"@kitschpatrol/shared-config": "^8.13.1",
+		"brewpub": "^0.5.0",
 		"bumpp": "^12.3.0",
 		"mdat-plugin-cli-help": "^3.4.1",
 		"publint": "^0.3.25",
 		"shx": "^0.4.0",
 		"skills": "^1.7.2",
 		"tsdown": "^0.23.1",
+		"tslib": "^2.8.1",
 		"typescript": "~6.0.3",
 		"vitest": "^5.0.3"
 	},

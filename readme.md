@@ -9,6 +9,7 @@
 [![NPM Package es-check-min](https://img.shields.io/npm/v/es-check-min.svg)](https://www.npmjs.com/package/es-check-min)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 [![CI](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml/badge.svg)](https://github.com/kitschpatrol/es-check-min/actions/workflows/ci.yml)
+[![Homebrew](https://img.shields.io/badge/Homebrew-kitschpatrol%2Ftap%2Fes--check--min-FBB040?logo=homebrew&logoColor=white)](https://github.com/kitschpatrol/homebrew-tap/blob/HEAD/Formula/es-check-min.rb)
 
 <!-- /badges -->
 
@@ -52,19 +53,31 @@ The exported library APIs are ESM-only.
 
 ### Installation
 
-Invoke directly:
+Pick the option that matches how you plan to use it.
 
-```sh
-npx es-check-min <file>
-```
+#### As a library
 
-Or, install locally to access the CLI commands in a single project or to import the provided APIs:
+Add it to your project to import the TypeScript API. This also puts the `es-check-min` CLI on your project's path:
 
 ```sh
 npm install es-check-min
 ```
 
-Or, install globally for access across your system:
+#### As a CLI tool
+
+Run it once without installing:
+
+```sh
+npx es-check-min <file>
+```
+
+Or install it globally with Homebrew:
+
+```sh
+brew install kitschpatrol/tap/es-check-min
+```
+
+Or install it globally with npm:
 
 ```sh
 npm install --global es-check-min
