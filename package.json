@@ -7,7 +7,8 @@
 		"cli",
 		"version-detection",
 		"npm-package",
-		"ecmascript"
+		"ecmascript",
+		"homebrew-formula"
 	],
 	"homepage": "https://github.com/kitschpatrol/es-check-min",
 	"bugs": "https://github.com/kitschpatrol/es-check-min/issues",
@@ -50,8 +51,8 @@
 		"@types/node": "~24.13.6",
 		"@types/yargs": "^17.0.35",
 		"es-check": "^9.8.1",
-		"execa": "^10.1.0",
-		"pkg-types": "^2.3.3",
+		"execa": "^10.2.1",
+		"pkg-types": "^2.4.0",
 		"yargs": "^18.2.0"
 	},
 	"devDependencies": {
@@ -62,12 +63,12 @@
 		"mdat-plugin-cli-help": "^3.4.1",
 		"publint": "^0.3.25",
 		"shx": "^0.4.0",
-		"tsdown": "^0.23.1",
-		"tslib": "^2.8.1",
+		"tsdown": "^0.23.4",
+		"tslib": "^2.9.1",
 		"typescript": "~6.0.3",
-		"vitest": "^5.0.3"
+		"vitest": "^5.0.5"
 	},
-	"packageManager": "pnpm@12.15.0",
+	"packageManager": "pnpm@12.16.1",
 	"engines": {
 		"node": "^24.16.0 || >=26.3.0"
 	}
